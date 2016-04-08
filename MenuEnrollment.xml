@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+	<menuItem>
+		<text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Home&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+		<url>/index.aspx</url>
+		<subMenu>
+			<menuItem>
+				<text>Assn Member Svcs</text>
+				<url>/Association/MemberServices.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>News &amp; Links</text>
+				<url>/News/News.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Investment Options</text>
+				<url>/Investments/InvestmentOptions.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Market Commentary</text>
+				<url>/Commentary/Commentary.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>FAQs</text>
+				<url>/FAQ/Faq.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Marketplace</text>
+				<url>/Insurance/Insurance.aspx</url>
+			</menuItem>
+		</subMenu>
+	</menuItem>
+	<menuItem>
+		<text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Enrollment&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+		<url>/Participant/Enrollment.aspx</url>
+	</menuItem>
+	<menuItem>
+		<text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Logout&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+		<url>/Common/Logout.aspx</url>
+	</menuItem>
+</menu>

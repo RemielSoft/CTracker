@@ -1,0 +1,195 @@
+﻿/* Helpers */
+.fl {float: left} .fr {float: right}
+.wrap {overflow: hidden;}
+
+.H {
+	color: #98012e;
+	font-size: 24px;
+	text-transform: uppercase;
+    position: relative;
+    top: -2px;
+}
+
+.defaultValue {
+    color: gray;
+    line-height: 6px !important;
+}
+
+.defaultValue sup {
+    color: #f00;
+    font-size: 12px;
+}
+
+.invalid {
+    border: 1px solid #bd2727 !important;
+}
+
+.nert_banner {
+    padding-top: 60px;
+    background: url("../images/nert_banner.jpg") no-repeat 0 bottom;
+    height: 231px;
+    background-size: 936px 231px;
+}
+/*.download_button {
+    display: none;
+}*/
+
+/*=========================
+ General
+=========================*/
+
+#page h3 {
+	color: #a45926;
+	font-size: 19px;
+	font-weight: normal;
+    margin: 0;
+}
+#page {
+    overflow: hidden;
+    font-size: 14px;
+    padding: 15px 20px 0 40px;  
+    font-family: arial, serif;
+}
+#page input[type="text"] {
+    outline: 0;
+    font-family: Ar, serif;
+}
+#content {
+	width: 537px;
+	float: left;
+    padding-top: 15px;
+}
+#content .fl {
+	width: 294px;
+}
+#content .fr {
+	width: 242px;
+}
+#content .v_list {
+	list-style: none;
+    padding: 0;
+}
+#content .v_list li {
+	background: url("../images/v_ico.png") no-repeat 0 3px;
+	padding-left: 25px;
+	margin-bottom: 4px;
+	font-size: 14px;
+	font-family: arial, serif;
+}
+#content .download_arrow {
+	background: url("../images/download_now.jpg") no-repeat;
+	width: 232px; 
+	height: 100px; 
+	padding: 42px 0 0 10px;
+	margin-top: 30px;
+	display: block;
+	text-decoration: none;
+}
+#content .download_arrow p {
+    color: #ce9c63;
+    margin:0 0 3px;
+    font-size: 16px;
+}
+#content .download_arrow span {color: #221c16}
+
+#sidebar {
+	width: 280px;
+	float: right;
+}
+.auth {
+	background: #f5f5f5;
+	border: 1px solid #ddd;
+	padding: 20px 10px 0;
+	margin: 5px 0 15px;
+
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.auth p {
+	overflow: hidden;
+	margin: 0 0 10px;
+}
+.auth input[type="text"] {
+	border: 1px solid #ccc;
+	width: 236px;
+	height: 28px;
+	font-size: 14px !important;
+	font-family: Arial !important;
+	line-height: 28px;
+	padding: 0 10px;
+
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.auth .firstName input[type="text"] {
+    margin-right: 2px;
+}
+.auth .firstName input[type="text"], 
+.auth .lastName input[type="text"] {
+	width: 104px;
+}
+.auth input[type="submit"] {
+	background: #bd2727;
+	background:-moz-linear-gradient(top,#cc2a2a 0%,#ad2424 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#cc2a2a),color-stop(100%,#ad2424));
+	background:-webkit-linear-gradient(top,#cc2a2a 0%,#ad2424 100%);
+	background:-o-linear-gradient(top,#cc2a2a 0%,#ad2424 100%);
+	background:-ms-linear-gradient(top,#cc2a2a 0%,#ad2424 100%);
+	background:linear-gradient(to bottom,#cc2a2a 0%,#ad2424 100%);
+
+	border: 0;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px 20px;
+	cursor: pointer;
+
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.auth .submitButton {
+    background: url("../images/lock_ico.gif") no-repeat 234px 0;
+}
+.auth .checkbox {
+	color: #3e3e3e;
+	font-size: 12px;
+	line-height: 12px;
+	position: relative;
+}
+.auth .checkbox label {
+	position: absolute;
+	top: 3px; left: 23px;
+    color: gray;
+}
+
+.auth .validation_wrap {
+    font-size: 12px;
+    margin: 0 0 10px 3px;
+    display: none;
+}
+
+.auth .success_message 
+{
+    font-size: 12px;
+    color: slategrey !important;
+    text-align: center;
+}
+
+#info .logo {
+	color: #98012e;
+	margin-top: 12px;
+	overflow: hidden;
+}
+#info .logo img {
+	margin-right: 10px;
+	float: left;
+}
+#info .logo span {
+    display: inline-block;
+    padding-top: 3px;
+    line-height: 18px;
+    float: left;
+    width: 160px;
+}

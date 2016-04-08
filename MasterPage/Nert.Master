@@ -1,0 +1,64 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Nert.master.cs" Inherits="RetirementFunds.MasterPage.Nert" %>
+<%@ Register TagPrefix="skm" Namespace="skmMenu" Assembly="skmMenu" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>National Employers Retirement Trust</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link id="Link1" href="~/Common/styles.css" rel="stylesheet" type="text/css" runat="server" />
+    <asp:ContentPlaceHolder ID="head" runat="server">        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <table width="1000px" border="0" cellspacing="0" cellpadding="0">
+	        <tr>
+	  	        <td>
+			        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				        <tr>
+					        <td colspan="3"><img src="~/images/header.gif" alt="NERT" width="630" height="60" runat="server" /></td>
+				        </tr>
+				        <tr>
+					        <td width="955px">
+							<div id="navcontainer" style="text-align:center;">
+	                            <skm:Menu id="Menu1" runat="server" Layout="Horizontal" ItemPadding="5" ItemSpacing="0" Cursor="Pointer" SubMenuCssClass="subMenuNavcontainer" BackColor="#CE9C63">
+	                                <SelectedMenuItemStyle CssClass="menuNavSelectedItem" />
+	                                <UnselectedMenuItemStyle CssClass="menuNavItem" />
+	                            </skm:Menu>
+							</div>
+					        </td>
+					        <td width="15"><img src="~/images/top_curve.gif" width="15" height="28" alt="" runat="server" /></td>
+					        <td width="67"><img src="~/images/drop_top.gif" width="30" height="28" align="top" alt="" runat="server"/></td>
+				        </tr>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">                        
+                        </asp:ContentPlaceHolder>
+				        <tr>
+					        <td bgcolor="#313163" align="center"><div style="height:34px;"><img src="~/images/foot_tag.gif" width="280" height="34" alt="" runat="server"/></div></td>
+					        <td bgcolor="#313163" align="right"><img src="~/images/arc_rt.gif" width="15" height="34" align="right" alt="" runat="server"/></td>
+				        </tr>
+				        <tr>
+					        <td bgcolor="#D9B48E" align="center">
+						        <div style="height:20px; padding: 8px 0px 2px 0px;"><span class="footer"> &nbsp;  
+                                    <a href="../Common/PrivacyPolicy.aspx" class=bottom>Privacy 
+                                    Policy</a>   &nbsp; | &nbsp;  <a href="../Common/ContactUs.aspx" class=bottom>Contact Us</a></span></div></td>
+					        <td bgcolor="#D9B48E" align="center"><img src="~/images/curve_tan.gif" width="15" height="30" align="right" alt="" runat="server"/></td>
+				        </tr>
+				        <tr>
+					        <td width="970px" colspan="2" class="dropShadow2">&nbsp;</td>
+					        <td width="30px"><img src="~/images/drop_corner2.gif" alt="" runat="server"/></td>
+				        </tr>
+			        </table>
+		        </td>
+	        </tr>
+	        <tr>
+		        <td>&nbsp;</td>
+	        </tr>
+        </table>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <asp:SiteMapDataSource ID="SiteMapDataSourceMenu" runat="server" SiteMapProvider="MenuSiteMapProvider" />                                                
+    </div>
+    </form>
+</body>
+</html>

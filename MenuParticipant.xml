@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+    <menuItem>
+        <text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Home&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+        <url>/index.aspx</url>
+		<subMenu>
+			<menuItem>
+				<text>Assn Member Svcs</text>
+				<url>/Association/MemberServices.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>News &amp; Links</text>
+				<url>/News/News.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Investment Options</text>
+				<url>/Investments/InvestmentOptions.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Market Commentary</text>
+				<url>/Commentary/Commentary.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>FAQs</text>
+				<url>/FAQ/Faq.aspx</url>
+			</menuItem>
+			<menuItem>
+				<text>Marketplace</text>
+				<url>/Insurance/Insurance.aspx</url>
+			</menuItem>
+		</subMenu>
+    </menuItem>
+    <menuItem>
+        <text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Participant&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+        <url>/Participant/Participant.aspx</url>
+        <subMenu>
+			<!--
+            <menuItem>
+                <text>Enroll In Your Plan</text>
+                <url>/Participant/Enrollment.aspx</url>
+            </menuItem>
+            -->
+			<menuItem>
+                <text>Account Information</text>
+                <url>/Participant/AccountInformation.aspx</url>
+            </menuItem>
+            <menuItem>
+                <text>Account Modification</text>
+                <url>/Participant/AccountModification.aspx</url>
+            </menuItem>
+            <menuItem>
+                <text>Savings Projection</text>
+                <url>/Participant/Savings.aspx</url>
+            </menuItem>
+            <menuItem>
+                <text>Termination Package</text>
+                <url>/Participant/Termination.aspx</url>
+            </menuItem>
+        </subMenu>
+    </menuItem>
+    <menuItem>
+        <text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Logout&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</text>
+        <url>/Common/Logout.aspx</url>
+    </menuItem>
+</menu>

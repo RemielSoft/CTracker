@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2419935D-81D0-4588-8803-C1C45BCC7BE7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RetirementFunds</RootNamespace>
+    <AssemblyName>RetirementFunds</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Data.Odbc, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\Microsoft.NET\Odbc.Net\Microsoft.Data.Odbc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Prospects\Bin\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\app\my\product\11.2.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="skmMenu, Version=2.2.1512.30922, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NertPublishCode\bin\skmMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\abovetitle.gif" />
+    <Content Include="images\account_info.gif" />
+    <Content Include="images\account_info_on.gif" />
+    <Content Include="images\account_mod.gif" />
+    <Content Include="images\account_mod_on.gif" />
+    <Content Include="images\acctinfooff.gif" />
+    <Content Include="images\acctinfoon.gif" />
+    <Content Include="images\acctmodoff.gif" />
+    <Content Include="images\acctmodon.gif" />
+    <Content Include="images\adminfeat.gif" />
+    <Content Include="images\adminfeatoff.gif" />
+    <Content Include="images\adminfeaton.gif" />
+    <Content Include="images\adminfeat_on.gif" />
+    <Content Include="images\adminserv.gif" />
+    <Content Include="images\adminserv_on.gif" />
+    <Content Include="images\adminsvcsoff.gif" />
+    <Content Include="images\adminsvcson.gif" />
+    <Content Include="images\ams.gif" />
+    <Content Include="images\am_century.gif" />
+    <Content Include="images\arrow2.gif" />
+    <Content Include="images\arrow4.gif" />
+    <Content Include="images\arrowgold.gif" />
+    <Content Include="images\arrowgrn.gif" />
+    <Content Include="images\arrow_grn.gif" />
+    <Content Include="images\arrow_grn2.gif" />
+    <Content Include="images\arrow_top.gif" />
+    <Content Include="images\artisan_blk_wht.jpg" />
+    <Content Include="images\blank.gif" />
+    <Content Include="images\blu_wht.gif" />
+    <Content Include="images\bottom.gif" />
+    <Content Include="images\bottom2.gif" />
+    <Content Include="images\bullet.gif" />
+    <Content Include="images\column.jpg" />
+    <Content Include="images\columns.gif" />
+    <Content Include="images\columntop.gif" />
+    <Content Include="images\col_wht.gif" />
+    <Content Include="images\corner.gif" />
+    <Content Include="images\corner_s.gif" />
+    <Content Include="images\design.gif" />
+    <Content Include="images\designoff.gif" />
+    <Content Include="images\designon.gif" />
+    <Content Include="images\design_on.gif" />
+    <Content Include="images\dk_blu.gif" />
+    <Content Include="images\enroll.gif" />
+    <Content Include="images\enrollmentoff.gif" />
+    <Content Include="images\enrollmenton.gif" />
+    <Content Include="images\enroll_on.gif" />
+    <Content Include="images\enter.gif" />
+    <Content Include="images\Euclid_files\filelist.xml" />
+    <Content Include="images\Euclid_files\image001.jpg" />
+    <Content Include="images\Euclid_files\image003.gif" />
+    <Content Include="images\faq.gif" />
+    <Content Include="images\faqoff.gif" />
+    <Content Include="images\faqon.gif" />
+    <Content Include="images\faq_on.gif" />
+    <Content Include="images\FBR.GIF" />
+    <Content Include="images\FBR.jpg" />
+    <Content Include="images\forparticipantoff.gif" />
+    <Content Include="images\forparticipanton.gif" />
+    <Content Include="images\forsponsoroff.gif" />
+    <Content Include="images\forsponsoron.gif" />
+    <Content Include="images\fundfidelity.gif" />
+    <Content Include="images\fundparn.gif" />
+    <Content Include="images\fundprov.gif" />
+    <Content Include="images\fundseilg.gif" />
+    <Content Include="images\fundstrong.gif" />
+    <Content Include="images\fundtwntycen.gif" />
+    <Content Include="images\fundvang.gif" />
+    <Content Include="images\getacro.gif" />
+    <Content Include="images\getquoteoff.gif" />
+    <Content Include="images\getquoteon.gif" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\homemenu.gif" />
+    <Content Include="images\homeoff.gif" />
+    <Content Include="images\homeon.gif" />
+    <Content Include="images\hometop.gif" />
+    <Content Include="images\home_on.gif" />
+    <Content Include="images\HUSIC.jpg" />
+    <Content Include="images\index.html" />
+    <Content Include="images\indexmenu1.gif" />
+    <Content Include="images\indexmenu2.gif" />
+    <Content Include="images\indexmenu2_on.gif" />
+    <Content Include="images\indexmenu3.gif" />
+    <Content Include="images\indexmenu3_on.gif" />
+    <Content Include="images\indexmenu4.gif" />
+    <Content Include="images\indexmenuon2.gif" />
+    <Content Include="images\indexmenuon3.gif" />
+    <Content Include="images\indexmenu_2.gif" />
+    <Content Include="images\indexmenu_3.gif" />
+    <Content Include="images\info.gif" />
+    <Content Include="images\info_top.gif" />
+    <Content Include="images\invest.gif" />
+    <Content Include="images\investment.gif" />
+    <Content Include="images\investments.gif" />
+    <Content Include="images\investments_on.gif" />
+    <Content Include="images\investoff.gif" />
+    <Content Include="images\investon.gif" />
+    <Content Include="images\investopoff.gif" />
+    <Content Include="images\investopon.gif" />
+    <Content Include="images\invest_on.gif" />
+    <Content Include="images\li.gif" />
+    <Content Include="images\login.gif" />
+    <Content Include="images\login2.gif" />
+    <Content Include="images\logos\10.gif" />
+    <Content Include="images\logos\11.gif" />
+    <Content Include="images\logos\12.gif" />
+    <Content Include="images\logos\13.gif" />
+    <Content Include="images\logos\14.gif" />
+    <Content Include="images\logos\15.gif" />
+    <Content Include="images\logos\2.gif" />
+    <Content Include="images\logos\7.gif" />
+    <Content Include="images\logos\8.gif" />
+    <Content Include="images\logos\9.gif" />
+    <Content Include="images\logos\am_century.gif" />
+    <Content Include="images\logos\artisan_blk_wht_small.gif" />
+    <Content Include="images\logos\FBR Logo.BMP" />
+    <Content Include="images\logos\fundfidelity_small.gif" />
+    <Content Include="images\logos\fundparn_small.gif" />
+    <Content Include="images\logos\fundstrong.gif" />
+    <Content Include="images\logos\fundvang_small.gif" />
+    <Content Include="images\logos\HUSIC.GIF" />
+    <Content Include="images\logos\mfs_small.gif" />
+    <Content Include="images\logos\NERTlogo.GIF" />
+    <Content Include="images\logos\NERTLogo.JPG" />
+    <Content Include="images\logos\PIMCO logo.bmp" />
+    <Content Include="images\logos\Pioneer logo.GIF" />
+    <Content Include="images\logos\principal.gif" />
+    <Content Include="images\logos\provident_mutual_logo.gif" />
+    <Content Include="images\logos\wells_fargo.gif" />
+    <Content Include="images\logout.gif" />
+    <Content Include="images\logout2.gif" />
+    <Content Include="images\logout3.gif" />
+    <Content Include="images\lt_blu.gif" />
+    <Content Include="images\market.gif" />
+    <Content Include="images\market_on.gif" />
+    <Content Include="images\menubottoma.gif" />
+    <Content Include="images\menubottomb.gif" />
+    <Content Include="images\menubottom_off.gif" />
+    <Content Include="images\menuebluestrip.gif" />
+    <Content Include="images\menutop.gif" />
+    <Content Include="images\menu_blu.gif" />
+    <Content Include="images\menu_spacer.gif" />
+    <Content Include="images\MFS Logo.tif" />
+    <Content Include="images\mfs.gif" />
+    <Content Include="images\mktcomoff.gif" />
+    <Content Include="images\mktcomon.gif" />
+    <Content Include="images\news.gif" />
+    <Content Include="images\newsoff.gif" />
+    <Content Include="images\newson.gif" />
+    <Content Include="images\news_on.gif" />
+    <Content Include="images\no_arrow.gif" />
+    <Content Include="images\participant.gif" />
+    <Content Include="images\participantname.gif" />
+    <Content Include="images\participantphoto.jpg" />
+    <Content Include="images\participant_on.gif" />
+    <Content Include="images\participant_ssn.gif" />
+    <Content Include="images\password.gif" />
+    <Content Include="images\pdficon.gif" />
+    <Content Include="images\people.jpg" />
+    <Content Include="images\people_admin.jpg" />
+    <Content Include="images\PIMCO.jpg" />
+    <Content Include="images\Pioneer Logo.BMP" />
+    <Content Include="images\Pioneer.GIF" />
+    <Content Include="images\pixel.gif" />
+    <Content Include="images\quote.gif" />
+    <Content Include="images\quote_on.gif" />
+    <Content Include="images\rtmenu_arch.gif" />
+    <Content Include="images\rtmenu_curve.gif" />
+    <Content Include="images\savings.gif" />
+    <Content Include="images\savings_on.gif" />
+    <Content Include="images\savprojoff.gif" />
+    <Content Include="images\savprojon.gif" />
+    <Content Include="images\sep.gif" />
+    <Content Include="images\sepa.gif" />
+    <Content Include="images\sepb.gif" />
+    <Content Include="images\shim.gif" />
+    <Content Include="images\sponsor.gif" />
+    <Content Include="images\sponsorinfo.gif" />
+    <Content Include="images\sponsorinfooff.gif" />
+    <Content Include="images\sponsorinfoon.gif" />
+    <Content Include="images\sponsorinfo_on.gif" />
+    <Content Include="images\sponsorname.gif" />
+    <Content Include="images\sponsorphoto.jpg" />
+    <Content Include="images\sponsor_on.gif" />
+    <Content Include="images\terminate.gif" />
+    <Content Include="images\terminate_on.gif" />
+    <Content Include="images\termoff.gif" />
+    <Content Include="images\termon.gif" />
+    <Content Include="images\title.gif" />
+    <Content Include="images\titleacctinfo.gif" />
+    <Content Include="images\titleacctmod.gif" />
+    <Content Include="images\titleadminfeat.gif" />
+    <Content Include="images\titleadminsvcs.gif" />
+    <Content Include="images\titleassocsvcs.gif" />
+    <Content Include="images\titledesignplan.gif" />
+    <Content Include="images\titleenroll.gif" />
+    <Content Include="images\titlefaq.gif" />
+    <Content Include="images\titleforparticipant.gif" />
+    <Content Include="images\titleforsponsor.gif" />
+    <Content Include="images\titlegetquote.gif" />
+    <Content Include="images\titleinvest.gif" />
+    <Content Include="images\titleinvestopt.gif" />
+    <Content Include="images\titlemktcom.gif" />
+    <Content Include="images\titlenews.gif" />
+    <Content Include="images\titlesavproj.gif" />
+    <Content Include="images\titlesponsorinfo.gif" />
+    <Content Include="images\titletermination.gif" />
+    <Content Include="images\titletrustsvcs.gif" />
+    <Content Include="images\title_accountinfo.gif" />
+    <Content Include="images\title_accountinfo1.jpg" />
+    <Content Include="images\title_acctmod.gif" />
+    <Content Include="images\title_acctmod1.jpg" />
+    <Content Include="images\title_admin.gif" />
+    <Content Include="images\title_admin1.jpg" />
+    <Content Include="images\title_adminserv.gif" />
+    <Content Include="images\title_adminserv1.jpg" />
+    <Content Include="images\title_enroll.gif" />
+    <Content Include="images\title_enroll1.jpg" />
+    <Content Include="images\title_insquote.jpg" />
+    <Content Include="images\title_insquote1.jpg" />
+    <Content Include="images\title_invest.gif" />
+    <Content Include="images\title_invest1.jpg" />
+    <Content Include="images\title_investoption.gif" />
+    <Content Include="images\title_investoption1.jpg" />
+    <Content Include="images\title_mktcomment.gif" />
+    <Content Include="images\title_mktcomment1.jpg" />
+    <Content Include="images\title_participant.gif" />
+    <Content Include="images\title_participant1.jpg" />
+    <Content Include="images\title_retirementsave.gif" />
+    <Content Include="images\title_retirementsave1.jpg" />
+    <Content Include="images\title_sponsor.gif" />
+    <Content Include="images\title_sponsor1.jpg" />
+    <Content Include="images\title_termination.gif" />
+    <Content Include="images\title_termination1.jpg" />
+    <Content Include="images\title_trustserv.gif" />
+    <Content Include="images\title_trustserv1.jpg" />
+    <Content Include="images\top.gif" />
+    <Content Include="images\topmenu_blank.gif" />
+    <Content Include="images\toprt_curve.gif" />
+    <Content Include="images\toprt_curve2.gif" />
+    <Content Include="images\trust.gif" />
+    <Content Include="images\trustsvcsoff.gif" />
+    <Content Include="images\trustsvcson.gif" />
+    <Content Include="images\trust_on.gif" />
+    <Content Include="images\ULTRA.gif" />
+    <Content Include="images\wht.gif" />
+    <Content Include="images\wht2.gif" />
+    <Content Include="images\wht_bottom.gif" />
+    <Content Include="nertapp\trustservices\trustservices.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Letter.cs" />
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\SimpleHash.cs" />
+    <Compile Include="Association\APA.aspx.cs">
+      <DependentUpon>APA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\APA.aspx.designer.cs">
+      <DependentUpon>APA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Association\DCDental.aspx.cs">
+      <DependentUpon>DCDental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\DCDental.aspx.designer.cs">
+      <DependentUpon>DCDental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Association\MemberServices.aspx.cs">
+      <DependentUpon>MemberServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\MemberServices.aspx.designer.cs">
+      <DependentUpon>MemberServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Association\NUCA.aspx.cs">
+      <DependentUpon>NUCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\NUCA.aspx.designer.cs">
+      <DependentUpon>NUCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Association\Rccd.aspx.cs">
+      <DependentUpon>Rccd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\Rccd.aspx.designer.cs">
+      <DependentUpon>Rccd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Association\RccdDental.aspx.cs">
+      <DependentUpon>RccdDental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Association\RccdDental.aspx.designer.cs">
+      <DependentUpon>RccdDental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commentary\Commentary.aspx.cs">
+      <DependentUpon>Commentary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commentary\Commentary.aspx.designer.cs">
+      <DependentUpon>Commentary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login3.aspx.cs">
+      <DependentUpon>Login3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login3.aspx.designer.cs">
+      <DependentUpon>Login3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login4.aspx.cs">
+      <DependentUpon>Login4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login4.aspx.designer.cs">
+      <DependentUpon>Login4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login5.aspx.cs">
+      <DependentUpon>Login5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login5.aspx.designer.cs">
+      <DependentUpon>Login5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Faq\Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq\Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faq\Glossary.aspx.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq\Glossary.aspx.designer.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\Insurance.aspx.designer.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLife.aspx.cs">
+      <DependentUpon>InsuranceLife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLife.aspx.designer.cs">
+      <DependentUpon>InsuranceLife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLTC.aspx.cs">
+      <DependentUpon>InsuranceLTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLTC.aspx.designer.cs">
+      <DependentUpon>InsuranceLTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLTD.aspx.cs">
+      <DependentUpon>InsuranceLTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceLTD.aspx.designer.cs">
+      <DependentUpon>InsuranceLTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\PlanDesign.aspx.cs">
+      <DependentUpon>PlanDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\PlanDesign.aspx.designer.cs">
+      <DependentUpon>PlanDesign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\PlanDesignActionThankYou.aspx.cs">
+      <DependentUpon>PlanDesignActionThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\PlanDesignActionThankYou.aspx.designer.cs">
+      <DependentUpon>PlanDesignActionThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\PlanDesign_Download.aspx.cs">
+      <DependentUpon>PlanDesign_Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance\PlanDesign_Download.aspx.designer.cs">
+      <DependentUpon>PlanDesign_Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investments\InvestmentOptions.aspx.cs">
+      <DependentUpon>InvestmentOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investments\InvestmentOptions.aspx.designer.cs">
+      <DependentUpon>InvestmentOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investments\InvestmentOptionsPerfs.aspx.cs">
+      <DependentUpon>InvestmentOptionsPerfs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investments\InvestmentOptionsPerfs.aspx.designer.cs">
+      <DependentUpon>InvestmentOptionsPerfs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Nert.Master.cs">
+      <DependentUpon>Nert.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Nert.Master.designer.cs">
+      <DependentUpon>Nert.Master</DependentUpon>
+    </Compile>
+    <Compile Include="News\Euclid.aspx.cs">
+      <DependentUpon>Euclid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\Euclid.aspx.designer.cs">
+      <DependentUpon>Euclid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\AccountBalance.aspx.cs">
+      <DependentUpon>AccountBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\AccountBalance.aspx.designer.cs">
+      <DependentUpon>AccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\AccountInformation.aspx.cs">
+      <DependentUpon>AccountInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\AccountInformation.aspx.designer.cs">
+      <DependentUpon>AccountInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\AccountModification.aspx.cs">
+      <DependentUpon>AccountModification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\AccountModification.aspx.designer.cs">
+      <DependentUpon>AccountModification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Enrollment.aspx.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Enrollment.aspx.designer.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\FundPerf.aspx.cs">
+      <DependentUpon>FundPerf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\FundPerf.aspx.designer.cs">
+      <DependentUpon>FundPerf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\KeyAdvisor.aspx.cs">
+      <DependentUpon>KeyAdvisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\KeyAdvisor.aspx.designer.cs">
+      <DependentUpon>KeyAdvisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\NertAlloc.aspx.cs">
+      <DependentUpon>NertAlloc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\NertAlloc.aspx.designer.cs">
+      <DependentUpon>NertAlloc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\NertAlloc_Step2.aspx.cs">
+      <DependentUpon>NertAlloc_Step2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\NertAlloc_Step2.aspx.designer.cs">
+      <DependentUpon>NertAlloc_Step2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\NertXfr.aspx.cs">
+      <DependentUpon>NertXfr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\NertXfr.aspx.designer.cs">
+      <DependentUpon>NertXfr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\NertXfr_Step2.aspx.cs">
+      <DependentUpon>NertXfr_Step2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\NertXfr_Step2.aspx.designer.cs">
+      <DependentUpon>NertXfr_Step2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Participant.aspx.cs">
+      <DependentUpon>Participant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Participant.aspx.designer.cs">
+      <DependentUpon>Participant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Savings.aspx.cs">
+      <DependentUpon>Savings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Savings.aspx.designer.cs">
+      <DependentUpon>Savings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Step_1_2.aspx.cs">
+      <DependentUpon>Step_1_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Step_1_2.aspx.designer.cs">
+      <DependentUpon>Step_1_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Step_1_3.aspx.cs">
+      <DependentUpon>Step_1_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Step_1_3.aspx.designer.cs">
+      <DependentUpon>Step_1_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Step_1_4.aspx.cs">
+      <DependentUpon>Step_1_4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Step_1_4.aspx.designer.cs">
+      <DependentUpon>Step_1_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\TaxSavings.aspx.cs">
+      <DependentUpon>TaxSavings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\TaxSavings.aspx.designer.cs">
+      <DependentUpon>TaxSavings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\Termination.aspx.cs">
+      <DependentUpon>Termination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participant\Termination.aspx.designer.cs">
+      <DependentUpon>Termination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportViewier.aspx.cs">
+      <DependentUpon>ReportViewier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewier.aspx.designer.cs">
+      <DependentUpon>ReportViewier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\WebCensus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebCensus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Webeetrans.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Webeetrans.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WebFundElection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebFundElection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WebFundHoldings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebFundHoldings.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WEBLOANPAY.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WEBLOANPAY.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WebPartcrt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebPartcrt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WEBSumacct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WEBSumacct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WEBSumacctPart.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WEBSumacctPart.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WEBSumacctPart_OneParticipant1.cs">
+      <DependentUpon>WEBSumacctPart_OneParticipant.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Sponsor\AdministrativeFeatures.aspx.cs">
+      <DependentUpon>AdministrativeFeatures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\AdministrativeFeatures.aspx.designer.cs">
+      <DependentUpon>AdministrativeFeatures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor\AdminServices.aspx.cs">
+      <DependentUpon>AdminServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\AdminServices.aspx.designer.cs">
+      <DependentUpon>AdminServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor\Investments.aspx.cs">
+      <DependentUpon>Investments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\Investments.aspx.designer.cs">
+      <DependentUpon>Investments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor\Sponsor.aspx.cs">
+      <DependentUpon>Sponsor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\Sponsor.aspx.designer.cs">
+      <DependentUpon>Sponsor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor\SponsorInformation.aspx.cs">
+      <DependentUpon>SponsorInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\SponsorInformation.aspx.designer.cs">
+      <DependentUpon>SponsorInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor\TrustServices.aspx.cs">
+      <DependentUpon>TrustServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor\TrustServices.aspx.designer.cs">
+      <DependentUpon>TrustServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThrowError.aspx.cs">
+      <DependentUpon>ThrowError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThrowError.aspx.designer.cs">
+      <DependentUpon>ThrowError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserMaster.aspx.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserMaster.aspx.designer.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Commentary\Commentary.aspx" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\Login.aspx" />
+    <Content Include="Common\Logout.aspx" />
+    <Content Include="Common\styles.css" />
+    <Content Include="Faq\Faq.aspx" />
+    <Content Include="Faq\Glossary.aspx" />
+    <Content Include="images\arc_rt.gif" />
+    <Content Include="images\column_top.jpg" />
+    <Content Include="images\curve_tan.gif" />
+    <Content Include="images\drop_bot.gif" />
+    <Content Include="images\drop_corner2.gif" />
+    <Content Include="images\drop_top.gif" />
+    <Content Include="images\drop_top2.gif" />
+    <Content Include="images\foot_tag.gif" />
+    <Content Include="images\front_banner.jpg" />
+    <Content Include="images\header.gif" />
+    <Content Include="images\sample_bg0.jpg" />
+    <Content Include="images\sample_bg1.jpg" />
+    <Content Include="images\sample_bg2.jpg" />
+    <Content Include="images\top_curve.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="Insurance\Confirmation.aspx" />
+    <Content Include="Insurance\Insurance.aspx" />
+    <Content Include="Insurance\InsuranceLife.aspx" />
+    <Content Include="Insurance\InsuranceLTC.aspx" />
+    <Content Include="Insurance\InsuranceLTD.aspx" />
+    <Content Include="Insurance\PlanDesign.aspx" />
+    <Content Include="Investments\InvestmentOptions.aspx" />
+    <Content Include="Menu.xml" />
+    <Content Include="MenuParticipant.xml" />
+    <Content Include="MenuSponsor.xml" />
+    <Content Include="nertapp\participan\participant.html" />
+    <Content Include="nertapp\participan\sponsorinfoplan.html" />
+    <Content Include="nertapp\sponsor\memberserv.html" />
+    <None Include="images\Euclid_files\image002.wmz" />
+    <Content Include="MasterPage\Nert.Master" />
+    <Content Include="News\Euclid.aspx" />
+    <Content Include="News\News.aspx" />
+    <Content Include="Participant\AccountBalance.aspx" />
+    <Content Include="Participant\AccountInformation.aspx" />
+    <Content Include="Participant\AccountModification.aspx" />
+    <Content Include="Participant\Enrollment.aspx" />
+    <Content Include="Participant\FundPerf.aspx" />
+    <Content Include="Participant\KeyAdvisor.aspx" />
+    <Content Include="Participant\NertAlloc.aspx" />
+    <Content Include="Participant\Participant.aspx" />
+    <Content Include="Participant\Savings.aspx" />
+    <Content Include="Participant\Step_1_2.aspx" />
+    <Content Include="Participant\Step_1_3.aspx" />
+    <Content Include="Participant\TaxSavings.aspx" />
+    <Content Include="Participant\Termination.aspx" />
+    <Content Include="Sponsor\AdministrativeFeatures.aspx" />
+    <Content Include="Sponsor\AdminServices.aspx" />
+    <Content Include="Sponsor\Investments.aspx" />
+    <Content Include="Sponsor\Sponsor.aspx" />
+    <Content Include="Insurance\GetImgText.ashx" />
+    <Content Include="Sponsor\SponsorInformation.aspx" />
+    <Content Include="Sponsor\TrustServices.aspx" />
+    <None Include="nertapp\plandocs\001.pdf" />
+    <None Include="nertapp\plandocs\2607.pdf" />
+    <None Include="nertapp\plandocs\7006.pdf" />
+    <None Include="nertapp\plandocs\7777.pdf" />
+    <None Include="nertapp\plandocs\AAA.pdf" />
+    <None Include="nertapp\plandocs\AAACF.pdf" />
+    <None Include="nertapp\plandocs\AAACF403.pdf" />
+    <None Include="nertapp\plandocs\APAIT.pdf" />
+    <None Include="nertapp\plandocs\CSPDC.pdf" />
+    <None Include="nertapp\plandocs\CTCOG.PDF" />
+    <None Include="nertapp\plandocs\CTI401K.pdf" />
+    <None Include="nertapp\plandocs\DCDENTAL.pdf" />
+    <None Include="nertapp\plandocs\ECCOG457.pdf" />
+    <None Include="nertapp\plandocs\ESIC.pdf" />
+    <None Include="nertapp\plandocs\GALLEGOS.pdf" />
+    <None Include="nertapp\plandocs\GRIMMER.pdf" />
+    <None Include="nertapp\plandocs\GRIMMERK.pdf" />
+    <None Include="nertapp\plandocs\HILLMAN.pdf" />
+    <None Include="nertapp\plandocs\JEM401K.pdf" />
+    <None Include="nertapp\plandocs\KING.pdf" />
+    <None Include="nertapp\plandocs\LPSK401k.pdf" />
+    <None Include="nertapp\plandocs\MESA.pdf" />
+    <None Include="nertapp\plandocs\MIDATLANTIC.pdf" />
+    <None Include="nertapp\plandocs\NIPP.pdf" />
+    <None Include="nertapp\plandocs\NVRC-dc.pdf" />
+    <None Include="nertapp\plandocs\NVTC.pdf" />
+    <None Include="nertapp\plandocs\PASSERO.pdf" />
+    <None Include="nertapp\plandocs\PenskiIrvin.pdf" />
+    <None Include="nertapp\plandocs\PLUNKET.pdf" />
+    <None Include="nertapp\plandocs\saidkhoira1.pdf" />
+    <None Include="nertapp\plandocs\SKI.pdf" />
+    <None Include="nertapp\plandocs\StColumbia.pdf" />
+    <None Include="nertapp\plandocs\TELCEPT.pdf" />
+    <None Include="nertapp\plandocs\TFBINC.PDF" />
+    <None Include="nertapp\plandocs\TLJ401k.pdf" />
+    <None Include="nertapp\plandocs\TOJO.pdf" />
+    <None Include="nertapp\ppts\AmCentUltra.ppt" />
+    <None Include="nertapp\ppts\ArtisanIntl.ppt" />
+    <None Include="nertapp\ppts\FidelityBlueChip.ppt" />
+    <None Include="nertapp\ppts\MFSValueA.ppt" />
+    <None Include="nertapp\ppts\Nert ModelsCombined.ppt" />
+    <None Include="nertapp\ppts\Paranassus.ppt" />
+    <None Include="nertapp\ppts\Parnassus.ppt" />
+    <None Include="nertapp\ppts\PrincipalRealEstate.ppt" />
+    <None Include="nertapp\ppts\StrongCorp.ppt" />
+    <None Include="nertapp\ppts\StrongCorp_06_03.ppt" />
+    <None Include="nertapp\ppts\StrongGovt.ppt" />
+    <None Include="nertapp\ppts\StrongGov_06_03.ppt" />
+    <None Include="nertapp\ppts\Wellington.ppt" />
+    <None Include="Pdfs\09-30-08 Principal Update letter.pdf" />
+    <None Include="Pdfs\amcentury.pdf" />
+    <None Include="Pdfs\AmCent_Ultra.pdf" />
+    <None Include="Pdfs\artisan.pdf" />
+    <None Include="Pdfs\Artisan_intl.pdf" />
+    <None Include="Pdfs\BENEFMODIFICATION.pdf" />
+    <None Include="Pdfs\Combined_05_2QTR.pdf" />
+    <None Include="Pdfs\CONTRIB.pdf" />
+    <None Include="Pdfs\Election.pdf" />
+    <None Include="Pdfs\F5305.PDF" />
+    <None Include="Pdfs\FBRFocus.pdf" />
+    <None Include="Pdfs\FBRFocus1.pdf" />
+    <None Include="Pdfs\FBRSmallCap.pdf" />
+    <None Include="Pdfs\fidelity.pdf" />
+    <None Include="Pdfs\FidelityBC.pdf" />
+    <None Include="Pdfs\formira.pdf" />
+    <None Include="Pdfs\formr.pdf" />
+    <None Include="Pdfs\formra.pdf" />
+    <None Include="Pdfs\formsep.pdf" />
+    <None Include="Pdfs\formsim.pdf" />
+    <None Include="Pdfs\Husic.pdf" />
+    <None Include="Pdfs\Husic_perf.pdf" />
+    <None Include="Pdfs\index.pdf" />
+    <None Include="Pdfs\invpol.pdf" />
+    <None Include="Pdfs\INVTRF-old.pdf" />
+    <None Include="Pdfs\INVTRF.pdf" />
+    <None Include="Pdfs\IRA2PLN.pdf" />
+    <None Include="Pdfs\IRAAPP.pdf" />
+    <None Include="Pdfs\IRAPKG.pdf" />
+    <None Include="Pdfs\IRATRF.pdf" />
+    <None Include="Pdfs\mfsvalue.pdf" />
+    <None Include="Pdfs\MFSValueA.pdf" />
+    <None Include="Pdfs\Model Portfolio.pdf" />
+    <None Include="Pdfs\Model Portfolios.pdf" />
+    <None Include="Pdfs\NERTERDR.pdf" />
+    <None Include="Pdfs\nertirs.pdf" />
+    <None Include="Pdfs\nerttrust.pdf" />
+    <None Include="Pdfs\ParanassusA.pdf" />
+    <None Include="Pdfs\parnassus.pdf" />
+    <None Include="Pdfs\PIMCO Foreign Bond.pdf" />
+    <None Include="Pdfs\Pimco.pdf" />
+    <None Include="Pdfs\PioneerCullen.pdf" />
+    <None Include="Pdfs\PioneerCullenValue.pdf" />
+    <None Include="Pdfs\Principal.pdf" />
+    <None Include="Pdfs\principal_property_acct Description.pdf" />
+    <None Include="Pdfs\principal_property_acct.pdf" />
+    <None Include="Pdfs\provident.pdf" />
+    <None Include="Pdfs\QRPTRF.pdf" />
+    <None Include="Pdfs\Roll into NERTIRA.pdf" />
+    <None Include="Pdfs\seligmanfacts.pdf" />
+    <None Include="Pdfs\sp500index.pdf" />
+    <None Include="Pdfs\StayInPlan.pdf" />
+    <None Include="Pdfs\Strong.pdf" />
+    <None Include="Pdfs\TakeInCash.pdf" />
+    <None Include="Pdfs\TransferOut.pdf" />
+    <None Include="Pdfs\US Property Letter.pdf" />
+    <None Include="Pdfs\Vanguard_500.pdf" />
+    <None Include="Pdfs\Vanguard_Wellington.pdf" />
+    <None Include="Pdfs\wellington.pdf" />
+    <None Include="Pdfs\WellsFargoFunds.pdf" />
+    <None Include="Pdfs\WF_Corp.pdf" />
+    <None Include="Pdfs\WF_Gov.pdf" />
+    <None Include="PlanDocs\001.pdf" />
+    <None Include="PlanDocs\2607.pdf" />
+    <None Include="PlanDocs\7006.pdf" />
+    <None Include="PlanDocs\7777.pdf" />
+    <None Include="PlanDocs\AAA.pdf" />
+    <None Include="PlanDocs\AAACF.pdf" />
+    <None Include="PlanDocs\AAACF403.pdf" />
+    <None Include="PlanDocs\APAIT.pdf" />
+    <None Include="PlanDocs\CSPDC.pdf" />
+    <None Include="PlanDocs\CTCOG.PDF" />
+    <None Include="PlanDocs\CTI401K.pdf" />
+    <None Include="PlanDocs\DCDENTAL.pdf" />
+    <None Include="PlanDocs\ECCOG457.pdf" />
+    <None Include="PlanDocs\ESIC.pdf" />
+    <None Include="PlanDocs\GALLEGOS.pdf" />
+    <None Include="PlanDocs\GRIMMER.pdf" />
+    <None Include="PlanDocs\GRIMMERK.pdf" />
+    <None Include="PlanDocs\HILLMAN.pdf" />
+    <None Include="PlanDocs\JEM401K.pdf" />
+    <None Include="PlanDocs\KING.pdf" />
+    <None Include="PlanDocs\LPSK401k.pdf" />
+    <None Include="PlanDocs\MESA.pdf" />
+    <None Include="PlanDocs\MIDATLANTIC.pdf" />
+    <None Include="PlanDocs\NIPP.pdf" />
+    <None Include="PlanDocs\NVRC-dc.pdf" />
+    <None Include="PlanDocs\NVTC.pdf" />
+    <None Include="PlanDocs\PASSERO.pdf" />
+    <None Include="PlanDocs\PenskiIrvin.pdf" />
+    <None Include="PlanDocs\PLUNKET.pdf" />
+    <None Include="PlanDocs\saidkhoira1.pdf" />
+    <None Include="PlanDocs\SKI.pdf" />
+    <None Include="PlanDocs\StColumbia.pdf" />
+    <None Include="PlanDocs\TELCEPT.pdf" />
+    <None Include="PlanDocs\TFBINC.PDF" />
+    <None Include="PlanDocs\TLJ401k.pdf" />
+    <None Include="PlanDocs\TOJO.pdf" />
+    <None Include="Properties\PublishProfiles\NertPublishCode.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="Association\APA.aspx" />
+    <Content Include="Association\DCDental.aspx" />
+    <Content Include="Association\MemberServices.aspx" />
+    <Content Include="Association\NUCA.aspx" />
+    <Content Include="Association\Rccd.aspx" />
+    <Content Include="Association\RccdDental.aspx" />
+    <Content Include="Common\Confirm.aspx" />
+    <Content Include="Common\ContactUs.aspx" />
+    <Content Include="Common\ForgotPassword.aspx" />
+    <Content Include="Common\Login2.aspx" />
+    <Content Include="Common\Login3.aspx" />
+    <Content Include="Common\Login4.aspx" />
+    <Content Include="Common\Login5.aspx" />
+    <Content Include="Common\PrivacyPolicy.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Insurance\PlanDesignActionThankYou.aspx" />
+    <Content Include="Insurance\PlanDesign_Download.aspx" />
+    <Content Include="Investments\InvestmentOptionsPerfs.aspx" />
+    <Content Include="Log\errors.txt" />
+    <Content Include="MenuEnrollment.xml" />
+    <Content Include="Participant\NertAlloc_Step2.aspx" />
+    <Content Include="Participant\NertXfr.aspx" />
+    <Content Include="Participant\NertXfr_Step2.aspx" />
+    <Content Include="Participant\Step_1_4.aspx" />
+    <Content Include="Reports\ReportViewier.aspx" />
+    <Content Include="Reports\WebCensus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WebCensus.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\Webeetrans.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Webeetrans.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WebFundElection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WebFundElection.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WebFundHoldings.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WebFundHoldings.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WEBLOANPAY.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WEBLOANPAY.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WebPartcrt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WebPartcrt.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WEBSumacct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WEBSumacct.cs</LastGenOutput>
+    </Content>
+    <Content Include="Reports\WEBSumacctPart.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WEBSumacctPart.cs</LastGenOutput>
+    </Content>
+    <Content Include="ThrowError.aspx" />
+    <Content Include="User\User.aspx" />
+    <Content Include="User\UserMaster.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\WebFundElection.resx">
+      <DependentUpon>WebFundElection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WEBSumacctPart_OneParticipant.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WEBSumacctPart_OneParticipant1.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1110</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1110/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

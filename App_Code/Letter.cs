@@ -1,0 +1,56 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Drawing;
+
+/// <summary>
+/// Summary description for Letter
+/// </summary>
+public class Letter
+{
+    string[] ValidFonts = {"Arial", "Verdana", "Georgia", "Times New Roman"};
+
+	public Letter(char c)
+	{
+        Random rnd = new Random();
+        font = new Font(ValidFonts[rnd.Next(ValidFonts.Count()-1)], rnd.Next(20)+20, FontStyle.Italic, GraphicsUnit.Pixel);        
+        letter = c;
+	}
+
+    public Font font
+    {
+        get;
+        private set;
+    }
+
+    public Size LetterSize
+    {
+        get
+        {
+            var Bmp = new Bitmap(1, 1);
+            var Grph = Graphics.FromImage(Bmp);
+            return Grph.MeasureString(letter.ToString(), font).ToSize();
+        }
+    }
+
+    public char letter
+    {
+        get;
+        private set;
+    }
+
+    public int space
+    {
+        get;
+        set;
+    }
+    
+}
